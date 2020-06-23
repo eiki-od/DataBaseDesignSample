@@ -8,7 +8,7 @@
 ### Association
 - has_many :tweets
 - has_many :groups_users
-- has_many :groups
+- has_many :groups  through:  :groups_users
 
 ## tweetsテーブル
 |Column|Type|Options|
@@ -24,10 +24,10 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|
+|name|string|null: false|
 ### Association
 - has_many :groups_users
-- belngs_to :user
+- has_many :user
 - has_many :tweets
 
 ## groups_usersテーブル
