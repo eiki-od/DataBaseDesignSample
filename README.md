@@ -27,8 +27,8 @@
 |name|string|null: false|
 ### Association
 - has_many :groups_users
-- has_many :user
-- has_many :tweets
+- has_many :users
+- has_many :tweets  through:  :groups_users
 
 ## groups_usersテーブル
 |Column|Type|Options|
